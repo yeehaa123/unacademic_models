@@ -1,0 +1,59 @@
+FORMAT: 1A
+
+# unacademic
+UnAcademic API is a *short texts saving* service similar to its physical paper presence on your table.
+
+# Group Notes
+Notes related resources of the **Paths API**
+
+## Paths Collection [/paths]
+### List all Paths [GET]
++ Response 200 (application/json)
+        
+        [
+                {
+                    "id": 123123,
+                    "curator":"Jan Hein",
+                    "title": "Coding the Humanities",
+                    "description": "A path about web technologies",
+                    "version": "1.2.3",
+                    "license": "MIT",
+                    "keywords": ["web","tech"]
+                }
+        ]
+    
+### Create a Path [POST]
++ Request (application/json)
+
+        {
+            "curator": "Yeehaa",
+            "title": "Coding the Humanities",
+            "description": "A path about web technologies",
+            "version": "1.2.3",
+            "license": "MIT",
+            "keywords": ["web","tech"],
+            "assets": [
+                {
+                    "type":"image",
+                    "url":"imagelocation.jpg"
+                }
+            ]
+        }
+
++ Response 201 (application/json)
+
+        {   
+            "id": 133,
+            "curator": "Yeehaa",
+            "title": "Coding the Humanities",
+            "description": "A path about web technologies",
+            "version": "1.2.3",
+            "license": "MIT",
+            "keywords": ["web","tech"],
+            "assets": [
+                {
+                    "type":"image",
+                    "url":"imagelocation.jpg"
+                }
+            ]
+        }
